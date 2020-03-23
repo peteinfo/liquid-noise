@@ -1,2 +1,2 @@
-# liquid-noise
- Liquid Noise
+# liquid noise
+We propose a novel method of visualising the impact of marine noise on wildlife using the method of cymatics. Cymatics is a method to visualise waveforms in a physical medium, in this case through playing audio into small pools of water that form the basis of the installation. Whale song is clearly seen as emerging patterns from the water (see header image) and the effect of noise distorting and visually masking the whale song is clearly seen. This technique was developed as part of the filming of A Voice Above Nature, a documentary exploring the effect of underwater noise pollution on marine life off the coast of Iceland, specifically humpback whales.
