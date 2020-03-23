@@ -24,10 +24,10 @@ void setup() {
   smooth();
 
 
-  whale1 = new Whale("whale", 0, height*0.35, 1, 0);
-  ship1 = new Ship("ship", 0, height*0.6, 1.5, 0);
+  whale1 = new Whale("whale", 0, height*0.35, 0.2, 0);
+  ship1 = new Ship("ship", 0, height*0.6, 0.5, 0);
 
-  speaker[0] = new Speaker(width*0.2, height/2);
+  speaker[0] = new Speaker(width*0.2, height*0.5);
   speaker[1] = new Speaker(width*0.4, height/2);
   speaker[2] = new Speaker(width*0.6, height/2);
   speaker[3] = new Speaker(width*0.8, height/2);
@@ -72,8 +72,8 @@ void draw() {
   whale1.draw();
   ship1.draw();
 
-  // draw info
-      textAlign(LEFT, TOP);
+  // draw info text
+  textAlign(LEFT, TOP);
   text("LIQUID NOISE\n"
     + "------------\n"
     + "SPACE, start/stop\n"
