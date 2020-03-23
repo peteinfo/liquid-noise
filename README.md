@@ -1,2 +1,2 @@
-# liquid_noise
+# liquid-noise
  Liquid Noise
