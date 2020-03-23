@@ -1,5 +1,7 @@
 
 
+// REFERENCE 
+
 //myBus.sendNoteOn(channel, pitch, velocity); // Send a Midi noteOn
 //delay(200);
 //myBus.sendNoteOff(channel, pitch, velocity); // Send a Midi nodeOff
