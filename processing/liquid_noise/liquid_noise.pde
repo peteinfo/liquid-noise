@@ -58,7 +58,7 @@ void draw() {
       // Whale speakers are CC channel 1-4
       myBus.sendControllerChange(0, n+1, int(dWhale));
       // Ship speakers are CC channel 5-9
-      myBus.sendControllerChange(0, n+4, int(dShip));
+      myBus.sendControllerChange(0, n+5, int(dShip));
     }
   }
 
