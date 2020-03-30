@@ -22,9 +22,9 @@ class Ship {
     x += xSpeed;
     y += ySpeed;
 
-    if (x > width) x = 0;
+    //if (x > width) x = 0;
     if (y > height) y = 0;
-    if (x < 0) x = width;
+    //if (x < 0) x = width;
     if (y < 0) y = height;
   }
 

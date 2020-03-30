@@ -41,22 +41,35 @@ void setupMIDI() {
 
 void noteOn(int channel, int pitch, int velocity) {
   // Receive a noteOn
-  println();
-  println("Note On:");
-  println("--------");
-  println("Channel:"+channel);
-  println("Pitch:"+pitch);
-  println("Velocity:"+velocity);
+  //println();
+  //println("Note On:");
+  //println("--------");
+  //println("Channel:"+channel);
+  //println("Pitch:"+pitch);
+  //println("Velocity:"+velocity);
+
+  switch (pitch) {
+  case 64: 
+    println("ship received!");
+
+    if (ship1.x > width) {
+      ship1.x = 0;
+    }
+    break;
+  default:
+    println("MIDI note received, not ship 64");
+    break;
+  }
 }
 
 void noteOff(int channel, int pitch, int velocity) {
   // Receive a noteOff
-  println();
-  println("Note Off:");
-  println("--------");
-  println("Channel:"+channel);
-  println("Pitch:"+pitch);
-  println("Velocity:"+velocity);
+  //println();
+  //println("Note Off:");
+  //println("--------");
+  //println("Channel:"+channel);
+  //println("Pitch:"+pitch);
+  //println("Velocity:"+velocity);
 }
 
 void controllerChange(int channel, int number, int value) {
