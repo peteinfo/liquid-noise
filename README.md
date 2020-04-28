@@ -9,3 +9,6 @@ This code includes a whale and boat simulator written in Processing which sends 
 Project lead: [Dan Pollard](http://www.danpollardmusic.co.uk)
 
 Coding: [Pete Bennett](www.peteinfo.com)
+
+
+![screenshot](https://github.com/peteinfo/liquid_noise/blob/master/images/application-screenshot.png "screnshot of the Liquid Noise boat and whale simulator")
