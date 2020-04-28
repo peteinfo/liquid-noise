@@ -7,4 +7,5 @@ For example, whale song is clearly seen in pattern emerging from the water and t
 This code includes a whale and boat simulator written in Processing which sends MIDI data over to Ableton Live.
 
 Project lead: [Dan Pollard](http://www.danpollardmusic.co.uk)
+
 Coding: [Pete Bennett](www.peteinfo.com)
