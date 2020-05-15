@@ -31,20 +31,20 @@ class Ship {
   void newShipRoute() {
 
     int r = floor(random(4));
-      
-    switch(r){
+
+    switch(r) {
     case 0:
       // new ship from left to right
       x = 0;
       y = random(0.1*height, 0.9*height);
-      xSpeed = random(1, 3);
+      xSpeed = random(shipMaxSpeed);
       ySpeed = 0;
       break;
     case 1:
       // new ship from right to left
       x = width;
       y = random(0.1*height, 0.9*height);
-      xSpeed = -random(1, 3);
+      xSpeed = -random(shipMaxSpeed);
       ySpeed = 0;
       break;
     case 2:
@@ -52,14 +52,14 @@ class Ship {
       x = random(0.1*width, 0.9*width);
       y = 0;
       xSpeed = 0;
-      ySpeed = random(1, 3);
+      ySpeed = random(shipMaxSpeed);
       break;
     case 3:
       // new ship from bottom to top
       x = random(0.1*width, 0.9*width);
       y = height;
       xSpeed = 0;
-      ySpeed = -random(1, 3);
+      ySpeed = -random(shipMaxSpeed);
       break;
     default:
       break;
@@ -78,6 +78,7 @@ class Ship {
     fill(255);
     rect(0, 0, 15, 15);
 
+    textFont(mainFont, 14);
     text(title, 0, 15);
 
     popMatrix();

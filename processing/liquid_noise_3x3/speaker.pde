@@ -3,16 +3,35 @@ class Speaker {
 
   float x;
   float y;
+  String name;
+  boolean selected;
 
-  Speaker(float _x, float _y) {
+  Speaker(float _x, float _y, String _name) {
     x = _x;
     y = _y;
+    name = _name;
+    selected = false;
   }
 
   void draw() {
+    pushMatrix();
+    translate(x, y);
     noStroke();
-    fill(150);
-    ellipse(x, y, 30, 30);
+    fill(255);
+    ellipse(0, 0, 30, 30);
+    fill(0);
+    noStroke();
+
+    if (selected) {
+      noFill();
+      stroke(255);
+      strokeWeight(2);
+      ellipse(0, 0, 40, 40);
+    }
+
+    textFont(mainFont, 16);
+    text(name, -6, -7);
+    popMatrix();
   }
 
   float distance(float _x, float _y) {
