@@ -4,12 +4,14 @@
 //================================
 
 
-// How many ships in the sea?
-// Petri dish
+// Features to Add
+// --------------------------
+// - Presentation Mode
 
-// layering 
-// talking? twp whales? communicate? long distance ship through middle? 
-// distance of communication - how many shipping lanes between X & Y?
+
+// Notes
+// ----------------
+// - Add whale communication? ... talking? two whales? communicate? long distance ship through middle? distance of communication - how many shipping lanes between X & Y?
 
 
 
