@@ -11,28 +11,29 @@
 
 
 import themidibus.*; //Import the library
-
 MidiBus myBus; // The MidiBus
 
 int channel = 0;
 int pitch = 64;
 int velocity = 127;
 
+// -------------------------------------------
+// Set the SPEED of the whales and ships here! 
+// -------------------------------------------
+float whaleMaxSpeed = 2; // measured in how many pixels it moves per turn 
+float shipMaxSpeed = 2; // measured in how many pixels it moves per turn 
+
 boolean running = true;
 boolean presentationMode = false;
+int scene = 1;
+int selectedSpeaker = 1;
+
 
 Whale whale1;
 Ship ship1;
 Speaker[] speaker = new Speaker[9];
 
-int selectedSpeaker = 1;
-
 PFont mainFont;
-
-float whaleMaxSpeed = 2; // measured in how many pixels it moves per turn 
-float shipMaxSpeed = 2; // measured in how many pixels it moves per turn 
-
-int scene = 1;
 
 
 void setup() {
