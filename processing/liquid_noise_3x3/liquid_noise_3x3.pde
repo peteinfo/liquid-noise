@@ -9,10 +9,9 @@
 // - Add whale communication? ... talking? two whales? communicate? long distance ship through middle? distance of communication - how many shipping lanes between X & Y?
 
 
-
+// MIDI setup
 import themidibus.*; //Import the library
 MidiBus myBus; // The MidiBus
-
 int channel = 0;
 int pitch = 64;
 int velocity = 127;
@@ -23,16 +22,18 @@ int velocity = 127;
 float whaleMaxSpeed = 2; // measured in how many pixels it moves per turn 
 float shipMaxSpeed = 2; // measured in how many pixels it moves per turn 
 
+// mode variables
 boolean running = true;
 boolean presentationMode = false;
 int scene = 1;
 int selectedSpeaker = 1;
 
-
+// whale, ship and speakers
 Whale whale1;
 Ship ship1;
 Speaker[] speaker = new Speaker[9];
 
+// fonts
 PFont mainFont;
 
 
@@ -43,7 +44,6 @@ void setup() {
 
   mainFont = createFont("Courier", 16, true);
   textFont(mainFont, 16);
-
 
   whale1 = new Whale("whale", 0, height*0.45, random(whaleMaxSpeed), 0);
   ship1 = new Ship("ship", 0, height*0.55, random(shipMaxSpeed), 0);
