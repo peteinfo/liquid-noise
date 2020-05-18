@@ -6,13 +6,6 @@
 
 // Features to Add
 // --------------------------
-// - Presentation Mode
-// - change screen ratio
-
-
-
-// Notes
-// ----------------
 // - Add whale communication? ... talking? two whales? communicate? long distance ship through middle? distance of communication - how many shipping lanes between X & Y?
 
 
@@ -87,10 +80,10 @@ void draw() {
       float dShip = speaker[n].distance(ship1.x, ship1.y);
 
       // then send that distance to the correct speaker in Live
-      // Whale speakers are CC channel 1-4
+      // Whale speakers are CC channel 1-9
       myBus.sendControllerChange(0, n+1, int(dWhale));
-      // Ship speakers are CC channel 5-9
-      myBus.sendControllerChange(0, n+5, int(dShip));
+      // Ship speakers are CC channel 10-19
+      myBus.sendControllerChange(0, n+11, int(dShip));
     }
   }
 
@@ -104,7 +97,7 @@ void draw() {
     // draw the speakers  
     for (int n = 0; n < speaker.length; n++) {
 
-      if (selectedSpeaker == n) {
+      if (selectedSpeaker-1 == n) {
         speaker[n].selected = true;
       } else {
         speaker[n].selected = false;
@@ -158,7 +151,7 @@ void sceneText() {
     text("LIQUID NOISE        scene 3\n"
       +  "---------------------------\n"
       +  "Whales and ships.\n"
-      +  "See the effect of the ships noise.", width*0.25, 50);
+      +  "See the effect of the ship's noise.", width*0.25, 50);
   }
 }
 
@@ -209,53 +202,56 @@ void keyPressed() {
     println("presentation mode = " + presentationMode);
   }
 
+  if ((key == 'w') || (key == 'W')) {
+    // send whale cc message
+    myBus.sendControllerChange(0, selectedSpeaker, int(random(127)));
+  }
+
+  if ((key == 's') || (key == 'S')) {
+    // send whale cc message
+    myBus.sendControllerChange(0, selectedSpeaker+10, int(random(127)));
+  }
+
+
+
   switch (key) {
   case ' ':
     running = !running;
     break;
   case '1':     
-    myBus.sendControllerChange(0, 1, int(random(127)));
-    selectedSpeaker = 0;
-    running = false;
-    break;
-  case '2':     
-    myBus.sendControllerChange(0, 2, int(random(127)));
     selectedSpeaker = 1;
     running = false;
     break;
-  case '3':     
-    myBus.sendControllerChange(0, 3, int(random(127)));
+  case '2':     
     selectedSpeaker = 2;
     running = false;
     break;
-  case '4':     
-    myBus.sendControllerChange(0, 4, int(random(127)));
+  case '3':     
     selectedSpeaker = 3;
     running = false;
     break;
-  case '5':     
-    myBus.sendControllerChange(0, 5, int(random(127)));
+  case '4':     
     selectedSpeaker = 4;
     running = false;
     break;
-  case '6':     
-    myBus.sendControllerChange(0, 6, int(random(127)));
+  case '5':     
     selectedSpeaker = 5;
     running = false;
     break;
-  case '7':     
-    myBus.sendControllerChange(0, 7, int(random(127)));
+  case '6':     
     selectedSpeaker = 6;
     running = false;
     break;
-  case '8':     
-    myBus.sendControllerChange(0, 8, int(random(127)));
+  case '7':     
     selectedSpeaker = 7;
     running = false;
     break;
-  case '9':     
-    myBus.sendControllerChange(0, 9, int(random(127)));
+  case '8':     
     selectedSpeaker = 8;
+    running = false;
+    break;
+  case '9':     
+    selectedSpeaker = 9;
     running = false;
     break;
   default:
