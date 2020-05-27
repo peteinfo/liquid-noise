@@ -28,7 +28,6 @@ float shipMaxSpeed = 2;    // measured in how many pixels it moves per turn
 float shipMinSpeed = 0.5;  // measured in how many pixels it moves per turn 
 int shipWaitMin = 100;     // measured in frames (30 frames per second)
 int shipWaitMax = 500;    // measured in frames (30 frames per second)
-boolean shipOffScreen = false;
 
 // mode variables
 boolean running = true;
@@ -37,6 +36,7 @@ int scene = 1;
 int selectedSpeaker = 1;
 int shipWaitCounter = 0;
 int shipWait = 0;
+boolean shipOffScreen = false;
 
 
 // whale, ship and speakers
